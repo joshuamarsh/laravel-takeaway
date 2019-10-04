@@ -1,9 +1,56 @@
-
 // Fonts
-@import url("https://fonts.googleapis.com/css?family=Raleway:300,400,600");
+@import url('https://fonts.googleapis.com/css?family=Raleway:300,400,600');
 
 // Variables
-@import "variables";
+@import 'variables';
 
 // Bootstrap
-@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+@import 'node_modules/bootstrap-sass/assets/stylesheets/bootstrap';
+
+* {
+  font-family: Sans-Serif;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  vertical-align: middle;
+  align-items: center;
+  background-color: #907a7a;
+  height: 140px;
+}
+.navspacer {
+  width: 100%;
+}
+.navmenu {
+  display: flex;
+  align-items: center;
+  max-width: 1200px;
+  margin: auto;
+  width: 100%;
+  justify-content: space-around;
+  flex-flow: row nowrap;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.navmenu ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+}
+.navmenu li {
+  padding: 10px;
+}
+.navmenu ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 2rem;
+}
+.logo {
+  width: 100px;
+  height: 100px;
+}
+.showcase {
+  background-color: grey;
+  height: 200px;
+}
