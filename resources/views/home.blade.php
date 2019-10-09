@@ -8,6 +8,7 @@
     <div><img class="showitem" src="images/showcase2.png" alt=""></div>
     <div><img class="showitem" src="images/showcase3.png" alt=""></div>
   </div>
+  
   <script>
     var myIndex = 0;
     carousel();
@@ -21,7 +22,7 @@
       myIndex++;
       if (myIndex > x.length) {myIndex = 1}    
       x[myIndex-1].style.display = "block";  
-      setTimeout(carousel, 2000);
+      setTimeout(carousel, 3000);
     }
   </script>
 
