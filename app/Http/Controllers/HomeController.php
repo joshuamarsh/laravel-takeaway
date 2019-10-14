@@ -16,6 +16,10 @@ class HomeController extends Controller
             'items' => $items
         ]);
     }
+    public function login()
+    {
+        return view('login');
+    }
     public function addItem()
     {
 
