@@ -11,5 +11,9 @@
 |
 */
 
+// Get
 Route::get('/', 'HomeController@index');
-Route::get('/additem', 'HomeController@addItem');
+Route::get('/login', 'HomeController@login');
+
+// Post
+Route::post('/additem', 'HomeController@addItem');
