@@ -17,7 +17,21 @@
         <li><a href="/">Home</a></li>
         <li><a href="/order">Order</a></li>
         <li><a href="/contact">Contact</a></li>
-        <li><a href="/login">Login</a></li>
+        @if(isset(Auth::user()->name))
+          <li>
+            <a href="/account">{!! Auth::user()->name !!}</a>
+          </li>
+          <li>
+            <a href="{{ route('logout') }}">Logout</a>
+          </li>
+        @else
+          <li>
+            <a href="/register">Register</a>
+          </li>
+          <li>
+            <a href="/login">Login</a>
+          </li>
+        @endif
       </ul>
     </nav>
   </header>
