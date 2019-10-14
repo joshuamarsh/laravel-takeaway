@@ -11,9 +11,15 @@
 |
 */
 
-// Get
 Route::get('/', 'HomeController@index');
 Route::get('/login', 'HomeController@login');
 
-// Post
+Route::get('logout', 'Auth\LoginController@logout');
+
+Route::get('/register', 'Auth\RegisterController@index');
+Route::post('register', 'RegisterController@create');
+
 Route::post('/additem', 'HomeController@addItem');
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
