@@ -3,36 +3,26 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Item;
-
 
 class HomeController extends Controller
 {
+    /**
+     * Create a new controller instance.
+     *
+     * @return void
+     */
+    public function __construct()
+    {
+        //$this->middleware('guest');
+    }
+
+    /**
+     * Show the application dashboard.
+     *
+     * @return \Illuminate\Contracts\Support\Renderable
+     */
     public function index()
     {
-        $items = Item::all();
-
-        return view('home', [
-            'items' => $items
-        ]);
-    }
-    public function login()
-    {
-        return view('login');
-    }
-    public function addItem()
-    {
-
-        $item = new Item();
-
-        $item->name = request('name');
-        $item->price = request('price');
-        $item->category = request('category');
-        $item->hot = request('hot');
-        $item->vegetarian = request('vegetarian');
-
-        $item->save();
- 
-        return redirect('/');
+        return view('home');
     }
 }
