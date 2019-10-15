@@ -2,20 +2,131 @@
   font-family: 'copperplate';
   src: url('Copperplate Regular.ttf');
 }
-
 * {
   font-family: 'copperplate', serif;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-
+html:not(.tab-outline) *:focus {
+  outline: none;
+}
+body {
+  background-color: black;
+}
 header {
   display: flex;
   justify-content: center;
   vertical-align: middle;
   align-items: center;
   height: 140px;
+}
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  box-shadow: 0 0 0 30px white inset !important;
+  border: 1px solid #000;
+}
+input {
+  border: 1px solid #000;
+  max-width: 100%;
+  padding: 13px 20px;
+  border-radius: 0;
+  background-color: inherit;
+  letter-spacing: 0.025em;
+  line-height: 1.4;
+  font-size: 25px;
+}
+input:active,
+input:focus {
+  border: none;
+}
+label {
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-size: 1.3em;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+.main-content {
+  height: calc(100vh - 140px);
+  padding-top: 100px;
+  background-color: white;
+}
+.login {
+  left: 33.33%;
+  width: 33.33%;
+  position: relative;
+}
+.login input,
+.login h1,
+.login label {
+  font-family: 'Montserrat', sans-serif;
+}
+.login form {
+  display: flex;
+  flex-direction: column;
+}
+.login h1 {
+  text-align: center;
+  margin-bottom: 50px;
+  font-weight: 400;
+  text-transform: uppercase;
+  font-size: 2.5rem;
+}
+.login form input {
+  margin-bottom: 50px;
+}
+.login button {
+  line-height: 1.42;
+  text-decoration: none;
+  text-align: center;
+  white-space: normal;
+  font-size: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  display: inline-block;
+  padding: 18px 20px;
+  width: auto;
+  min-width: 90px;
+  vertical-align: middle;
+  cursor: pointer;
+  border: 1px solid transparent;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  border-radius: 0;
+  color: #fff;
+  background: #6b9bab;
+  position: relative;
+  border: 0;
+  margin: 0 15px;
+}
+.login button:before,
+.login button::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 20px;
+  -webkit-transform: skewX(-12deg);
+  transform: skewX(-12deg);
+  background-color: inherit;
+}
+.login button::before {
+  left: -7px;
+}
+.login button::after {
+  right: -7px;
+}
+#remember {
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+  margin-left: 15px;
 }
 .navspacer {
   width: 100%;

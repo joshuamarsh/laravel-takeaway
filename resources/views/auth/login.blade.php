@@ -9,10 +9,10 @@
                 @csrf
                     <h1>Login</h1>
                     <label for="email">EMAIL</label>
-                    <input id="email" type="email" name="email" required autocomplete="email" autofocus>
+                    <input id="email" type="email" name="email" required autofocus>
                     <label for="password">PASSWORD</label>
-                    <input id="password" type="password" name="password" required autocomplete="current-password">
-                    <div>
+                    <input id="password" type="password" name="password" required>
+                    <div style="display: flex;">
                         <label for="remember">Remember Me</label>
                         <input type="checkbox" name="remember" id="remember">
                     </div>
