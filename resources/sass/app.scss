@@ -188,3 +188,12 @@ label {
   font-size: 4.5em;
   line-height: 1em;
 }
+.burger {
+  display: none;
+}
+.burger div {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 5px;
+}
