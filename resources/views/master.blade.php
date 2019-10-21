@@ -5,7 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="{{ mix('/css/app.css') }}">
-  <link src="{{ mix('/js/app.js') }}">
+  <script src="/js/app.js" type="text/javascript"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <title>@yield('title')</title>
 </head>
 <body>
@@ -13,7 +14,7 @@
     <nav class="navmenu">
       <a href="/"><img class="logo" src="/images/logo.png" alt=""></a>
       <div class="navspacer"></div>
-      <ul>
+      <ul class="navlinks">
         <li><a href="/">Home</a></li>
         <li><a href="/order">Order</a></li>
         <li><a href="/contact">Contact</a></li>
