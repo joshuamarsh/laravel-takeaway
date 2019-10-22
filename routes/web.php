@@ -13,13 +13,10 @@
 
 Route::get('/', 'HomeController@index');
 Route::get('/login', 'HomeController@login');
-
-Route::get('logout', 'Auth\LoginController@logout');
-
-Route::get('/register', 'Auth\RegisterController@index');
+Route::get('logout', 'LoginController@logout');
+Route::get('/register', 'RegisterController@index');
 Route::post('register', 'RegisterController@create');
-
+Route::get('/order', 'OrderController@index');
 Route::post('/additem', 'HomeController@addItem');
 Auth::routes();
-
 Route::get('/home', 'HomeController@index')->name('home');
