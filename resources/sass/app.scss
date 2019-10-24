@@ -221,3 +221,23 @@ label {
 .nav-active {
   transform: translateX(0%);
 }
+.order-nav {
+  background-color: black;
+}
+.order-nav ul {
+  justify-content: space-around;
+  display: flex;
+  list-style: none;
+  height: 70px;
+  align-items: center;
+}
+
+.order-nav li {
+  padding: 10px;
+}
+
+.order-nav li a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.2rem;
+}
