@@ -10,4 +10,8 @@ class OrderController extends Controller
     {
         return view('order');
     }
+    public function starter()
+    {
+        return view('/menu/starter');
+    }
 }
