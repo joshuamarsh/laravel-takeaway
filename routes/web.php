@@ -20,3 +20,5 @@ Route::get('/order', 'OrderController@index');
 Route::post('/additem', 'HomeController@addItem');
 Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/order/starters', 'OrderController@starter');
