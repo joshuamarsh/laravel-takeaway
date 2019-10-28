@@ -12,13 +12,15 @@
 */
 
 Route::get('/', 'HomeController@index');
-Route::get('/login', 'HomeController@login');
-Route::get('logout', 'LoginController@logout');
-Route::get('/register', 'RegisterController@index');
-Route::post('register', 'RegisterController@create');
-Route::get('/order', 'OrderController@index');
-Route::post('/additem', 'HomeController@addItem');
-Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
+// Auth Routes
+Auth::routes();
+
+// Menu Routes
 Route::get('/order/starters', 'OrderController@starter');
+Route::get('/order', 'OrderController@index');
+
+// Stock Routes
+Route::get('/stock', 'StockController@index');
+Route::post('additem', 'StockController@addItem');
