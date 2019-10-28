@@ -24,6 +24,19 @@
     </div>
   </div>
   <div class="additem-modal">
-
+    <form method="POST" action="{{ route('additem') }}">
+      <label for="name">Item Name</label>
+      <input type="text" name="name">
+      <label for="price">Price</label>
+      <input type="text" name="price">
+      <label for="category">Category</label>
+      <input type="text" name="category">
+      <label for="hot">Hot</label>
+      <input type="text" name="hot">
+      <label for="vegatarian">Vegatarian</label>
+      <input type="text" name="vegatarian">
+      <button type="submit">Add</button>
+    </form>
   </div>
+  
 @endsection
