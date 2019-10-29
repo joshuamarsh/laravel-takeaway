@@ -23,4 +23,4 @@ Route::get('/order', 'OrderController@index');
 
 // Stock Routes
 Route::get('/stock', 'StockController@index');
-Route::post('additem', 'StockController@addItem');
+Route::post('/additem', 'StockController@addItem');
