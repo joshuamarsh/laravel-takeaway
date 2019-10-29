@@ -24,7 +24,8 @@
     </div>
   </div>
   <div class="additem-modal">
-    <form method="POST" action="{{ route('additem') }}">
+    <form method="POST" action="/additem">
+      {{ csrf_field() }}
       <label for="name">Item Name</label>
       <input type="text" name="name">
       <label for="price">Price</label>
@@ -33,8 +34,8 @@
       <input type="text" name="category">
       <label for="hot">Hot</label>
       <input type="text" name="hot">
-      <label for="vegatarian">Vegatarian</label>
-      <input type="text" name="vegatarian">
+      <label for="vegetarian">Vegetarian</label>
+      <input type="text" name="vegetarian">
       <button type="submit">Add</button>
     </form>
   </div>
