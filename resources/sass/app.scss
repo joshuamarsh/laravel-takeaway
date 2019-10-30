@@ -243,6 +243,7 @@ label {
 }
 .items {
   display: flex;
+  flex-flow: wrap;
 }
 .item {
   margin: 12px;
