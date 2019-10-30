@@ -3,15 +3,17 @@
 @section('title', 'Starters')
 
 @section('items')
-  <div class="item">
-    <div class="item-name">
-        <p>Spring Rolls</p>
-    </div>
-    <div class="item-price">
+  @foreach($items as $item)
+    <div class="item">
+      <div class="item-name">
+        <p>{{$item->itemname}}</p>
+      </div>
+      <div class="item-price">
         <p>
-          <span>&pound;3.95</span>
+          <span>&pound;{{$item->price}}</span>
         </p>
+      </div>
+      <button class="item-add">ADD</button>
     </div>
-    <button class="item-add">ADD</button>
-  </div>
+  @endforeach
 @endsection
