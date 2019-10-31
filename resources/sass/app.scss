@@ -298,3 +298,30 @@ label {
   top: 20%;
   left: 25%;
 }
+.order-layout {
+  display: flex;
+}
+.side-basket {
+  padding: 15px;
+  background: #f3f2f2;
+  width: 30%;
+}
+.side-header {
+  position: relative;
+  padding: 21px 0 16px;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.side-item {
+  display: flex;
+}
+.side-quantity {
+  width: 24px;
+}
+.side-itemname {
+  flex-grow: 1;
+}
+.side-price {
+  width: 60px;
+}
