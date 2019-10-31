@@ -19,7 +19,7 @@ Auth::routes();
 
 // Menu Routes
 Route::get('/order/starters', 'OrderController@starter');
-Route::get('/order', 'OrderController@index');
+Route::get('/order', 'OrderController@starter');
 
 // Stock Routes
 Route::get('/stock', 'StockController@index');
