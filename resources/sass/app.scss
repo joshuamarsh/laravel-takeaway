@@ -301,6 +301,9 @@ label {
 .order-layout {
   display: flex;
 }
+.order-menu {
+  flex-grow: 1;
+}
 .side-basket {
   padding: 15px;
   background: #f3f2f2;
