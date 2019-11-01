@@ -13,7 +13,11 @@
           <span>&pound;{{$item->price}}</span>
         </p>
       </div>
-      <button class="item-add">ADD</button>
+      <form method="POST" action="/addtobasket">
+        @csrf
+        <input type="hidden" name="itemid" value="{{$item->id}}">
+        <button type="submit" class="item-add">ADD</button>
+      </form>
     </div>
   @endforeach
 @endsection
