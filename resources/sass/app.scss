@@ -318,6 +318,9 @@ label {
 }
 .side-item {
   display: flex;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  font-size: 1rem;
 }
 .side-quantity {
   width: 24px;
@@ -327,4 +330,10 @@ label {
 }
 .side-price {
   width: 60px;
+}
+.side-image {
+  width: 15px;
+  height: 15px;
+  margin-left: 15px;
+  cursor: pointer;
 }
