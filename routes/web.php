@@ -21,6 +21,9 @@ Auth::routes();
 Route::get('/order/starters', 'OrderController@starter');
 Route::get('/order', 'OrderController@starter');
 
+// Basket Routes
+Route::post('/addtobasket', 'OrderController@addtobasket');
+
 // Stock Routes
 Route::get('/stock', 'StockController@index');
 Route::post('/additem', 'StockController@addItem');
