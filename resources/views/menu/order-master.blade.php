@@ -29,17 +29,22 @@
           <p>Your Order</p>
         </div>
         <div class="side-content">
-          <div class="side-item">
-            <div class="side-quantity">
-              <span>1</span>
+            @foreach ($basket as $item)
+            <div class="side-item">
+              <div class="side-quantity">
+                <span>{{$item->quantity}}</span>
+              </div>
+              <div class="side-itemname">
+                <span>{{$item->itemname}}</span>
+              </div>
+              <div class="side-itemprice">
+                <p>{{$item->price}}</p>
+              </div>
+              <div class="side-image">
+                <img src="/images/close.svg" alt="">
+              </div>
             </div>
-            <div class="side-itemname">
-              <span>Red Pepper Dip</span>
-            </div>
-            <div class="side-itemprice">
-              <p>&pound;3.95</p>
-            </div>
-          </div>
+            @endforeach
         </div>
       </div>
     </div>
