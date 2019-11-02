@@ -245,11 +245,13 @@ label {
 .items {
   display: flex;
   flex-flow: wrap;
+  overflow-y: auto;
+  height: 100%;
 }
 .item {
   margin: 12px;
   background-color: #fff;
-  min-height: 160px;
+  height: 160px;
   position: relative;
   box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.35);
   padding: 1.2rem;
