@@ -46,6 +46,9 @@
             </div>
             @endforeach
         </div>
+        <div class="side-footer">
+          <a href="/checkout">Checkout</a>
+        </div>
       </div>
     </div>
   </div>
