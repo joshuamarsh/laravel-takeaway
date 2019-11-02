@@ -1,6 +1,6 @@
 @extends('master')
 
-@section('title', 'Homepage')
+@section('title', 'Order')
 
 @section('content')
   <div class="main-content">
