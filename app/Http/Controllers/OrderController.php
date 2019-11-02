@@ -35,11 +35,18 @@ class OrderController extends Controller
     public function addtobasket(Request $itemdata)
     {
         $orderid = Order::where('userID', Auth::user()->id)->value('id');
-        OrderItem::create([
-            'itemID' => $itemdata->itemid,
-            'orderID' => $orderid,
-            'quantity' => 1
-        ]);
+        if (OrderItem::where(['orderID' => $orderid, 'itemID' => $itemdata->itemid])->first())
+        {
+            OrderItem::where(['orderID' => $orderid, 'itemID' => $itemdata->itemid])->first()->increment('quantity');
+        }
+        else
+        {
+            OrderItem::create([
+                'itemID' => $itemdata->itemid,
+                'orderID' => $orderid,
+                'quantity' => 1
+            ]);
+        }
         return redirect()->back();
     }
 }
