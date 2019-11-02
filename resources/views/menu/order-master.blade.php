@@ -38,7 +38,7 @@
                 <span>{{$item->itemname}}</span>
               </div>
               <div class="side-itemprice">
-                <p>{{$item->price}}</p>
+                <p>&pound;{{$item->price}}</p>
               </div>
               <div class="side-image">
                 <img src="/images/close.svg" alt="">
