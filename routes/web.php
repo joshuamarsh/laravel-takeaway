@@ -16,14 +16,15 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 // Auth Routes
 Auth::routes();
+Route::get('/logout', '\App\Http\Controllers\Auth\LoginController@logout')->middleware('auth');
 
 // Menu Routes
-Route::get('/order/starters', 'OrderController@starter');
-Route::get('/order', 'OrderController@starter');
+Route::get('/order/starters', 'OrderController@starter')->middleware('auth');
+Route::get('/order', 'OrderController@starter')->middleware('auth');
 
 // Basket Routes
-Route::post('/addtobasket', 'OrderController@addtobasket');
+Route::post('/addtobasket', 'OrderController@addtobasket')->middleware('auth');
 
 // Stock Routes
-Route::get('/stock', 'StockController@index');
-Route::post('/additem', 'StockController@addItem');
+Route::get('/stock', 'StockController@index')->middleware('auth');
+Route::post('/additem', 'StockController@addItem')->middleware('auth');
