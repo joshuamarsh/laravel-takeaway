@@ -24,6 +24,7 @@ Route::get('/order', 'OrderController@starter')->middleware('auth');
 
 // Basket Routes
 Route::post('/addtobasket', 'OrderController@addtobasket')->middleware('auth');
+Route::get('/checkout', 'OrderController@checkout')->middleware('auth');
 
 // Stock Routes
 Route::get('/stock', 'StockController@index')->middleware('auth');

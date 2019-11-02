@@ -49,4 +49,8 @@ class OrderController extends Controller
         }
         return redirect()->back();
     }
+    public function checkout()
+    {
+        return view('checkout');
+    }
 }
