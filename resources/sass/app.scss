@@ -364,3 +364,25 @@ label {
   font-size: 1.2rem;
   line-height: 59px;
 }
+.stock-table {
+  text-align: left;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.checkout {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.checkout h1 {
+  text-align: center;
+}
+.basket-time {
+  text-align: center;
+}
+#time {
+  padding: 0 10px;
+  height: 42px;
+  max-width: 400px;
+  width: 80%;
+}
