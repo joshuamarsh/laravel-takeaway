@@ -51,6 +51,15 @@ class OrderController extends Controller
     }
     public function checkout()
     {
-        return view('checkout');
+        $total = 0;
+        $orderid = Order::where('userID', Auth::user()->id)->value('id');
+        $basket = DB::table('order_items')->where('order_items.orderID', $orderid)
+                        ->join('items', 'order_items.itemID', '=', 'items.id')
+                        ->get();
+        foreach($basket as $item){
+            $total = $total + $item->quantity * $item->price;
+        }
+        $total = number_format((float)$total, 2, '.', '');
+        return view('checkout')->with(['basket' => $basket, 'total' => $total]);
     }
 }
